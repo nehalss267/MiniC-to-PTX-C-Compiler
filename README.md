@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# minic
-
-=======
->>>>>>> 2636c59f1af6b1463aeaebe31a89be9c509db965
 A compiler for MiniC, a small integer-only C subset, targeting PTX (NVIDIA's
 GPU assembly). I wrote it to work through the whole compiler pipeline end to
 end and to have output I can check with a real assembler.
@@ -179,7 +174,3 @@ tests/
   valid PTX, just not pressure-optimal).
 - `--validate` only proves ptxas accepts the module; nothing is run on a GPU.
 
-## Roadmap
-
-See [`roadmap.md`](roadmap.md) for milestones and [`plan.md`](plan.md) for the
-full design.

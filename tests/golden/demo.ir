@@ -1,0 +1,75 @@
+func square(x) -> int {
+  %t0 = %v0(x) * %v0(x)
+  return %t0
+}
+
+func fib(n) -> int {
+  %t0 = %v0(n) < 2
+  if %t0 == 0 goto endif_1
+  return %v0(n)
+  endif_1:
+  %t1 = %v0(n) - 1
+  %t2 = call fib(%t1)
+  %t3 = %v0(n) - 2
+  %t4 = call fib(%t3)
+  %t5 = %t2 + %t4
+  return %t5
+}
+
+func accumulate(n) -> void {
+  %v1(i) = 0
+  while_top_0:
+  %t0 = %v1(i) < %v0(n)
+  if %t0 == 0 goto while_end_1
+  %t1 = %v1(i) + 1
+  %v1(i) = %t1
+  goto while_top_0
+  while_end_1:
+  return
+}
+
+func main() -> int {
+  %t5 = call square(6)
+  %v4(s) = %t5
+  %t7 = call fib(7)
+  %v5(f) = %t7
+  %v6(r) = 0
+  %t8 = 0
+  %t8 = 1
+  and_end_0:
+  if %t8 == 0 goto else_1
+  %v6(r) = 1
+  goto endif_2
+  else_1:
+  %v6(r) = 2
+  endif_2:
+  %t11 = 1
+  goto or_end_3
+  or_next_4:
+  goto or_next_5
+  or_next_5:
+  %t11 = 0
+  or_end_3:
+  if %t11 == 0 goto endif_7
+  %t14 = %v6(r) + 100
+  %v6(r) = %t14
+  endif_7:
+  %v7(sum) = 0
+  %v8(i) = 1
+  while_top_8:
+  %t15 = %v8(i) <= 10
+  if %t15 == 0 goto while_end_9
+  %t16 = %v7(sum) + %v8(i)
+  %v7(sum) = %t16
+  %t17 = %v8(i) + 1
+  %v8(i) = %t17
+  goto while_top_8
+  while_end_9:
+  %t18 = call accumulate(5)
+  %t21 = 1 + %v4(s)
+  %t22 = %t21 + %v5(f)
+  %t23 = %t22 + %v6(r)
+  %t24 = %t23 + %v7(sum)
+  return %t24
+}
+

@@ -1,0 +1,51 @@
+int square(int x) {
+    return x * x;
+}
+
+int fib(int n) {
+    if (n < 2) {
+        return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+
+void accumulate(int n) {
+    int i = 0;
+    while (i < n) {
+        i = i + 1;
+    }
+    return;
+}
+
+int main() {
+    int a = 2 + 3 * 4;
+    int b = -a;
+    int c = !0;
+    int notZero = !a;
+
+    int s = square(6);
+    int f = fib(a - 7);
+
+    int r = 0;
+    if (a > 10 && notZero == 0) {
+        r = 1;
+    } else {
+        r = 2;
+    }
+    if (c == 1 || b == 0) {
+        r = r + 100;
+    }
+
+    int sum = 0;
+    int i = 1;
+    while (i <= 10) {
+        sum = sum + i;
+        i = i + 1;
+    }
+
+    int unused = 12345;   // eliminated by DCE
+
+    accumulate(5);
+
+    return a + b + c + s + f + r + sum;
+}

@@ -1,0 +1,7 @@
+build/
+*.o
+*.exe
+*.ptx
+*.cubin
+compile_commands.json
+docs/

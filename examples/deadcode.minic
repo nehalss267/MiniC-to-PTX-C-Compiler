@@ -1,0 +1,6 @@
+int main() {
+    int unused = 99;
+    int tmp = 4 * 5;
+    int kept = 6 + 1;
+    return kept;
+}

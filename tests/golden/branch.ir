@@ -1,0 +1,25 @@
+func main() -> int {
+  %v2(r) = 0
+  %t0 = 0
+  %t0 = 1
+  and_end_0:
+  if %t0 == 0 goto else_1
+  %v2(r) = 1
+  goto endif_2
+  else_1:
+  %v2(r) = 2
+  endif_2:
+  %t3 = 1
+  goto or_next_4
+  or_next_4:
+  goto or_end_3
+  or_next_5:
+  %t3 = 0
+  or_end_3:
+  if %t3 == 0 goto endif_7
+  %t6 = %v2(r) + 10
+  %v2(r) = %t6
+  endif_7:
+  return %v2(r)
+}
+

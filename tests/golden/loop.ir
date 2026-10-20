@@ -1,0 +1,15 @@
+func main() -> int {
+  %v0(sum) = 0
+  %v1(i) = 1
+  while_top_0:
+  %t0 = %v1(i) <= 10
+  if %t0 == 0 goto while_end_1
+  %t1 = %v0(sum) + %v1(i)
+  %v0(sum) = %t1
+  %t2 = %v1(i) + 1
+  %v1(i) = %t2
+  goto while_top_0
+  while_end_1:
+  return %v0(sum)
+}
+

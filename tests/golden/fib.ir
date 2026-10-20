@@ -1,0 +1,18 @@
+func fib(n) -> int {
+  %t0 = %v0(n) < 2
+  if %t0 == 0 goto endif_1
+  return %v0(n)
+  endif_1:
+  %t1 = %v0(n) - 1
+  %t2 = call fib(%t1)
+  %t3 = %v0(n) - 2
+  %t4 = call fib(%t3)
+  %t5 = %t2 + %t4
+  return %t5
+}
+
+func main() -> int {
+  %t0 = call fib(10)
+  return %t0
+}
+

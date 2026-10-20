@@ -1,0 +1,15 @@
+// if/else + comparison operators, plus logical && and ||.
+int main() {
+    int x = 7;
+    int y = 3;
+    int r = 0;
+    if (x > y && y != 0) {
+        r = 1;
+    } else {
+        r = 2;
+    }
+    if (x < y || x == 7) {
+        r = r + 10;
+    }
+    return r; // 11
+}
